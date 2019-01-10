@@ -1,4 +1,4 @@
-   printLetter(0x7C,0x30,0x18,0x7C);  // N
+﻿   printLetter(0x7C,0x30,0x18,0x7C);  // N
    printLetter(0x04,0x78,0x4A,0x79);  // O
    printLetter(0x01,0x02,0x00,0x7C);  // I
    printLetter(0x04,0x7C,0x04,0x00);  // T
@@ -48,7 +48,7 @@ printLetter(0x04,0x78,0x4A,0x79);  // O
 printLetter(0x7C,0x10,0x10,0x7C);  // H
 printLetter(0x44,0x28,0x10,0x7e);  // K
    
-   
+   https://lm.facebook.com/l.php?u=https%3A%2F%2Fdrive.google.com%2Fdrive%2Ffolders%2F1HpNUvqEC2tcaoeX5O5sDYcs1AU8CXHBn%3Fusp%3Dsharing%26fbclid%3DIwAR1KRaNagVVicBtLRZg9EJda9bRFQRzJIqjVC0nzLFsdhyF7vNUVN-4mOTU&h=AT0qqyCQ0QPPc8C5FNyZ_X_lS0r9U7-jcF-rQySeC4WyyMgFQofIecQTSROpWWJGPjmg8zjqSZhV5W0Z8t4_qqkBtfvTsHZGa5nVjikt1VYGMZ2iS-rhLASwZcU4eVFGWafp
    
 
    
