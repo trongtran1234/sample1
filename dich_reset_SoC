@@ -1,0 +1,31 @@
+Reset trong hệ thống SoC
+Biên dịch, soạn thảo và sắp xếp: Trân Văn Trọng.
+Nguồn: Bài viết “Reset verification in SoC designs” (Của CHRIS KWOK, PRIYA VISWANATHAN AND KURT TAKARA MENTOR A SIEMENS BUSINESS) và các nguồn tài liệu trên mạng (mentor.com).
+
+
+
+ Các hệ thống SoC hiện nay tích hợp nhiều khối IP được thiết kế
+bởi các nhà cung cấp khác nhau, mỗi nhà cung cấp lại có cách thiết lập tín hiệu reset riêng của họ. Điều đó dẫn tới cấu trúc reset của một thiết kế số có thể trở nên rất phức tạp. Một design có rất nhiều nguồn reset bao gồm power-on reset, reset cho phần cứng, debug reset, reset cho phần mềm, và reset bộ đếm thời gian watchdog. Lỗi trong thiết kế reset có thể dẫn đến hiện tượng metastability (asyn reset), trục trặc hoặc các lỗi dẫn đến function hoạt động không đúng. Hơn nữa, phức tạp
+tương tác có thể xảy ra với sự hội tụ của
+nhiều thiết lập lại, nhiều đồng hồ và nhiều nguồn
+tên miền. Trong nhiều trường hợp, điều này dẫn đến một reset tree
+lớn hơn và phức tạp hơn clock tree. Có rất nhiều mối quan gnai5 liên quan đến việc tổng hợp(Synthesis) clock tree và cân bằng tải bây giờ cũng áp dụng cho reset tree.
+Rõ ràng, đó là một thách thức để đảm bảo rằng tất cả các nguồn
+thiết lập lại tuyên truyền an toàn đến các điểm đến dự định
+trong mọi điều kiện!
+Theo truyền thống, mô phỏng là phương pháp chính
+được sử dụng để xác minh hành vi thiết lập lại, thường nặng
+phụ thuộc vào mô phỏng cấp độ cổng. Tuy nhiên, cấp độ RTL
+kiểm tra mô phỏng thường không đầy đủ, và mức cổng
+mô phỏng chỉ có thể được chạy muộn trong chu kỳ thiết kế.
+Thậm chí tệ hơn, điển hình là các lỗi liên quan đến thiết lập lại rất
+bản chất nghiêm trọng, hoàn trả chip
+không dùng được Ví dụ: lỗi đặt lại có thể ngăn
+thiết lập lại thiết kế về trạng thái bắt đầu tốt đã biết,
+làm cho hoạt động của nó hoàn toàn không đáng tin cậy. Trong nhiều hơn
+trường hợp cực đoan, thiết kế có thể tiêu thụ quá nhiều
+cấp nguồn trong khi xác nhận đặt lại, khiến thiết bị
+quá nóng và bị hư hỏng vĩnh viễn. Tất cả những thứ ở đây
+Các yếu tố kết hợp tiêu cực để gây ra tốn kém, giai đoạn cuối
+thay đổi thiết kế; và, trong trường hợp xấu nhất, nhiều triệu
+đô la silicon quay lại và trì hoãn thời gian để thị trường
