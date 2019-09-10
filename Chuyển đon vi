@@ -1,0 +1,51 @@
+Nói một chút về cách chuyển đổi các đơn vị như bit, byte, MB, GB, TB, half word, word, Double word và quad word.
+
+Trong bài này mình sẽ nói ngắn gọn về cách chuyển đổi qua lại giữa các đơn vị đo lường dữ liệu. chẳng hạn như bit, byte, MB, GB, TB, half word, word, Double word và quad word.
+Đầu tiên đơn vị đo lường nhỏ nhất là bit. Một bit là một chữ số nhị phân duy nhất, là 0 hoặc 1 được sử dụng trong xử lí tín hiệu số.
+1 byte thì bằng 8 bit.
+Ví dụ: Biến A được khai báo kiểu byte
+Nghĩa là A = xxxxxxxx (x = 0 hoặc 1).
+Tóm lại ta có bảng sau:
+Bit: Một Bit là một giá trị 0 hoặc 1.
+Byte: 1 Byte = 8 Bits
+Kilobyte (KB): 1 KB = 8,192 Bits , 1 kB = 1,024 Bytes
+Megabyte (MB): 1 MB =1024 KB (1 Megabyte bằng Một nghìn không trăm hai tư Kilobyte)
+Gigabyte (GB): GB = 1024 MB (1 Gigabyte bằng Một nghìn không trăm hai tư Megabyte)
+Terabyte (TB): 1 TB = 1024 GB (1 Terabyte bằng Một nghìn không trăm hai tư Gigabyte)
+Petabyte (PB): PB = 1024 TB (1 Petabyte bằng Một nghìn không trăm hai tư Terabyte )
+Exabyte (EB): EB = 1024 PB (1 Exabyte bằng Một nghìn không trăm hai tư Petabyte)
+Zettabyte (ZB): 1 ZB = 1024 EB (1 Zettabyte bằng Một nghìn không trăm hai tư Zettabyte)
+
+Ta có 1 khái niệm khác để chỉ các đơn vị dữ liệu đó là half word và word, double word (Dword) và quad word (quadword).
+Trước khi đi vào phân tích giá trị cho từng đơn vị mình đã từng tìm hiểu rất nhiều bài viết về 2 kiễu dữ liệu này.
+Có nhiều bạn nói rằng 1 word = 2 byte = 16 bit. Tuy nhiên, Bộ xử lý đã được thiết kế rất đa dạng và không phải lúc nào 1 word cũng bằng 2 byte.
+
+Mình lấy ví dụ bộ xử lý 8086 và 8087 trước đây đã sử dụng các word 16 bit. Tuy nhiên, các bộ xử lý gần đây thường sử dụng các word là 32 hoặc 64 bit.
+
+Trong những năm 50 và 60, Đã có những vi xử lí có kiểu word là 4, 9 hoặc 36 bit. Từ thập niên 70 trở về sau 1 word thường bằng 16 bit.
+Chúng ta phải nhớ rằng bộ nhớ chỉ có thể được xử lý theo bội số của word. 
+Như vậy hiện này ta có 3 khả năng xảy ra đó là:
+1 word = 16 bits.
+1 word = 32 bits.
+1 word = 64 bits.
+Hai giá trị được sử dụng phổ biến là 1 word bằng 16 hoặc 32 bit.
+Trong computer, 1 word thường mang giá trị 16 bit. Trong hệ thống SoC thì 1 word bằng 32 bit (4 byte). Các bạn có nhớ là khi viết pattern để verify cho một code để access đến memory chúng ta hay cho địa chỉ cộng 4 không. Ở đây nghĩa là 1 word = 4 byte.
+Cho các đơn vị khác ta có:
+1 half word = ½ word.
+1 double word = 2 word
+1 quad word = 2 double word = 4 word.
+Để tránh nhầm lẫn ta hay gọi như sau:
+32-bit word hoặc 16-bit word, 64-bit double word hoặc 32-bit double word…v..v.
+
+Hi vọng với bài viết này bạn tìm được câu trả lời cho mình. Để lại comment khi bạn có câu hỏi gì nhé.
+Tác giả: Trần Văn Trọng.
+Ngày: 10/09/2019
+
+
+
+
+
+
+
+
+
